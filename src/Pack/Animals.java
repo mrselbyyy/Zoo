@@ -6,7 +6,7 @@ public interface Animals {
     String getMeal();
 
     public static void main(String[] args) {
-        Lion alex = new Lion("alex", 5,"Meat");
+        Lion alex = new Lion("alex", 5,"Meattt");
         System.out.println("Name: " + alex.getName());
         System.out.println("Ages: " + alex.getRealAge());
         System.out.println("Meal: " + alex.getMeal());
