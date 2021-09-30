@@ -29,6 +29,11 @@ public class Zebra implements Herbivores, WashingAnimals, PassForVisitors {
     }
 
     @Override
+    public boolean singleAnimals() {
+        return false;
+    }
+
+    @Override
     public double weightMeal() {
         return weight * 1.1;
     }

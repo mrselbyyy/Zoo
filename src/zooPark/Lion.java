@@ -27,6 +27,11 @@ public class Lion implements Hunters, LongHaired {
     }
 
     @Override
+    public boolean singleAnimals() {
+        return false;
+    }
+
+    @Override
     public String toothBrashing() {
         return "At 11:00";
     }

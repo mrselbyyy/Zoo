@@ -1,8 +1,13 @@
+import javafx.print.Collation;
 import zooPark.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-        Lion alex = new Lion("Alex", 5, "Meat");
+        Lion alex = new Lion("Alex", 5, "Lamb");
         System.out.println("Name: " + alex.getName());
         System.out.println("Ages: " + alex.getRealAge());
         System.out.println("Meal: " + alex.getMeal());
@@ -18,10 +23,20 @@ public class Main {
         System.out.println("Name: " + alice.getName());
         System.out.println("Ages: " + alice.getRealAge());
         System.out.println("Meal: " + alice.getMeal());
-        Wolf ivan = new Wolf("David", 5, "Beef");
+        Wolf ivan = new Wolf("Ivan", 5, "Beef");
         System.out.println("Name: " + ivan.getName());
         System.out.println("Ages: " + ivan.getRealAge());
         System.out.println("Meal: " + ivan.getMeal());
+
+
+
+
+
+
+
+
+
+
 
     }
 }

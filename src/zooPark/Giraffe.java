@@ -28,6 +28,11 @@ public class Giraffe implements Herbivores, WashingAnimals, PassForVisitors {
     }
 
     @Override
+    public boolean singleAnimals() {
+        return true;
+    }
+
+    @Override
     public double weightMeal() {
         return weight * 0.9;
     }

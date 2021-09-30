@@ -27,6 +27,11 @@ public class Fox implements Hunters, WashingAnimals, LongHaired {
     }
 
     @Override
+    public boolean singleAnimals() {
+        return true;
+    }
+
+    @Override
     public String toothBrashing() {
         return "At 12:30";
     }

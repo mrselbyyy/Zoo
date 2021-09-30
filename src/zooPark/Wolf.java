@@ -27,6 +27,11 @@ public class Wolf implements Hunters {
     }
 
     @Override
+    public boolean singleAnimals() {
+        return true;
+    }
+
+    @Override
     public String toothBrashing() {
         return "At 12:00";
     }
