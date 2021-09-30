@@ -57,12 +57,14 @@ public class ArrayPractice {
         Iterator<Animals> animalsIterator = allAnimals.iterator();
         while (animalsIterator.hasNext()){
             Animals nextAnimal = animalsIterator.next();
-            if (nextAnimal.singleAnimals()){
+            if (nextAnimal.singleAnimals()) {
                 cageForOther.remove(nextAnimal);
+            } else {
+                cageForSingle.remove(nextAnimal);
             }
 
-            else {cageForSingle.remove(nextAnimal);
-            }
+
+
         }
         System.out.println("Вольер для одиночных:");
         for (Animals animals :
@@ -81,11 +83,18 @@ public class ArrayPractice {
         /*Думал переопределить equals чтобы искать по полю питания, но если я правильно понял, такой метод нужен для каждого животного отдельно, можешь на след. занятии
          * показать как это делается?*/
 
-       /* Iterator<Animals> deleteHunters = cageForSingle.iterator();
+       Iterator<Animals> deleteHunters = cageForSingle.iterator();
         while (deleteHunters.hasNext()){
             Animals nextHunter = deleteHunters.next();
-            if (nextHunter.hashCode() == alice.hashCode() | nextHunter.hashCode() == alex.hashCode() | nextHunter.hashCode() == ivan.hashCode()){
-                cageForSingle.remove(nextHunter);
+            if (nextHunter.getName().equals(alex.getName()) || nextHunter.getName().equals(ivan.getName()) || nextHunter.getName().equals(alice.getName())){
+                deleteHunters.remove();
+            }
+        }
+        Iterator<Animals> deleteHunters1 = cageForOther.iterator();
+        while (deleteHunters1.hasNext()){
+            Animals nextHunter = deleteHunters1.next();
+            if (nextHunter.getName().equals(alex.getName()) || nextHunter.getName().equals(ivan.getName()) || nextHunter.getName().equals(alice.getName())){
+                deleteHunters1.remove();
             }
         }
 
@@ -100,8 +109,7 @@ public class ArrayPractice {
                 cageForOther) {
             System.out.println(animals.getName());
         }
-        Не доделал это задание
-        */
+
         System.out.println("---------------------------" + "\n");
         System.out.println("Создать мапу и поместить в неё и хищных и травоядных. Ключ - тип животного.");
         HashMap<Integer, String> cageForAll = new HashMap<>();

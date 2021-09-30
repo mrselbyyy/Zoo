@@ -12,6 +12,13 @@ public class Wolf implements Hunters {
     }
 
     @Override
+    public String toString() {
+        return "Wolf{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
     public String getName() {
         return name;
     }
