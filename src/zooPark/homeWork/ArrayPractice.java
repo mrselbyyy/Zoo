@@ -1,4 +1,7 @@
-package zooPark;
+package zooPark.homeWork;
+
+import zooPark.Animals;
+import zooPark.allAnimals.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,11 +23,13 @@ public class ArrayPractice {
 
 
     public static void main(String[] args) {
-        Lion alex = new Lion("Alex", 5, "Lamb");
+        Lion alex = new Lion("Alex", 5, "Lamb", 50);
         Zebra marty = new Zebra("Marty", 5, "Green", 300);
         Giraffe melman = new Giraffe("Melman", 7, "Trees", 600);
-        Fox alice = new Fox("Alice", 7, "Chicken");
-        Wolf ivan = new Wolf("Ivan", 5, "Beef");
+        Fox alice = new Fox("Alice", 7, "Chicken", 20);
+        Wolf ivan = new Wolf("Ivan", 5, "Beef", 45);
+
+
 
 //Создать коллекцию - зоопарк. Добавить в неё всех ранее созданных животных.
         System.out.println("Создать коллекцию - зоопарк. Добавить в неё всех ранее созданных животных:");
@@ -81,7 +86,7 @@ public class ArrayPractice {
         /*Думал переопределить equals чтобы искать по полю питания, но если я правильно понял, такой метод нужен для каждого животного отдельно, можешь на след. занятии
          * показать как это делается?*/
 
-       /* Iterator<Animals> deleteHunters = cageForSingle.iterator();
+        Iterator<Animals> deleteHunters = cageForSingle.iterator();
         while (deleteHunters.hasNext()){
             Animals nextHunter = deleteHunters.next();
             if (nextHunter.hashCode() == alice.hashCode() | nextHunter.hashCode() == alex.hashCode() | nextHunter.hashCode() == ivan.hashCode()){
@@ -100,8 +105,8 @@ public class ArrayPractice {
                 cageForOther) {
             System.out.println(animals.getName());
         }
-        Не доделал это задание
-        */
+
+
         System.out.println("---------------------------" + "\n");
         System.out.println("Создать мапу и поместить в неё и хищных и травоядных. Ключ - тип животного.");
         HashMap<Integer, String> cageForAll = new HashMap<>();

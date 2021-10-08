@@ -9,6 +9,8 @@ public interface Animals {
 
     boolean singleAnimals();
 
+    int getWeight();
+
 
 }
 
