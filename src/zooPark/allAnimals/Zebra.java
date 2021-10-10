@@ -1,17 +1,30 @@
-package zooPark;
+package zooPark.allAnimals;
 
-public class Giraffe implements Herbivores, WashingAnimals, PassForVisitors {
+import zooPark.Herbivores;
+import zooPark.PassForVisitors;
+import zooPark.WashingAnimals;
+
+import java.util.Comparator;
+
+public class Zebra implements Herbivores, WashingAnimals, PassForVisitors {
     private String name;
     private double age;
     private String meal;
-    private double weight;
+    private int weight;
 
-    public Giraffe (String name, double ages, String meal, double weight){
+    public Zebra(String name, double ages, String meal, int weight) {
         this.name = name;
         this.age = ages;
         this.meal = meal;
         this.weight = weight;
     }
+
+    @Override
+    public String toString() {
+        return "Zebra{" +
+                "name='" + name + '\'' + '}';
+    }
+
     @Override
     public String getName() {
         return name;
@@ -19,22 +32,27 @@ public class Giraffe implements Herbivores, WashingAnimals, PassForVisitors {
 
     @Override
     public double getRealAge() {
-        return age * 3.5;
+        return age * 4.9;
     }
 
     @Override
     public String getMeal() {
-        return meal + " At 11: 15 o'clock";
+        return meal + " At 11:00 o'clock";
     }
 
     @Override
     public boolean singleAnimals() {
-        return true;
+        return false;
+    }
+
+    @Override
+    public int getWeight() {
+        return weight;
     }
 
     @Override
     public double weightMeal() {
-        return weight * 0.9;
+        return weight * 1.1;
     }
 
     @Override
@@ -44,7 +62,10 @@ public class Giraffe implements Herbivores, WashingAnimals, PassForVisitors {
 
     @Override
     public boolean passInCage() {
-
         return true;
     }
+
+
+
+
 }
