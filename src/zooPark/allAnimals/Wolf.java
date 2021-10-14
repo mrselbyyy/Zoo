@@ -27,7 +27,7 @@ public class Wolf implements Hunters {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, meal);
+        return Objects.hash(name, age, meal, getClass().getSimpleName());
     }
 
     @Override
