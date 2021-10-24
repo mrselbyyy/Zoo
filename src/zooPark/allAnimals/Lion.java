@@ -34,7 +34,7 @@ public class Lion implements Hunters, LongHaired {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age, meal);
+        return Objects.hash(name, age, meal, getClass().getSimpleName());
     }
 
     @Override

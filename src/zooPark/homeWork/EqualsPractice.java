@@ -38,9 +38,9 @@ public class EqualsPractice  {
         animalsMap.put(ivan.getName(), ivan);
         animalsMap.put(nick.getName(), nick);
 
-        Iterator<Animals> AnimalsIterator = animalsMap.values().iterator();
-        while (AnimalsIterator.hasNext()) {
-            Animals nextAnimal = AnimalsIterator.next();
+        Iterator<Animals> animalsIterator = animalsMap.values().iterator();
+        while (animalsIterator.hasNext()) {
+            Animals nextAnimal = animalsIterator.next();
             System.out.println(nextAnimal);
         }
         System.out.println("_______________________");
